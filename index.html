@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - Sua Loja de Jogos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .font-pixel {
+            font-family: 'Press Start 2P', cursive;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .category-btn.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Header -->
+    <header class="bg-black py-4 px-6 border-b-4 border-blue-500">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-blue-500 rounded-full"></div>
+                <h1 class="font-pixel text-2xl">GameHub</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-blue-400">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Jogos</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Promoções</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Login</button>
+                <div class="relative">
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                    <button class="text-2xl">🛒</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative h-96 overflow-hidden">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d0a572c3-874f-47af-a272-2657ef3fad43.png" alt="Banner principal mostrando vários jogos populares com gráficos impressionantes e ação intensa" class="w-full h-full object-cover opacity-70">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div class="text-center px-4">
+                <h2 class="font-pixel text-4xl md:text-6xl mb-4 text-blue-400">MELHORES JOGOS DO ANO</h2>
+                <p class="text-xl mb-8">Descubra os jogos mais incríveis com os melhores preços</p>
+                <button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-bold text-lg">EXPLORAR</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Categories -->
+    <section class="py-12 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Categorias</h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="category-btn active px-6 py-2 rounded-full border border-gray-600 hover:bg-blue-600 hover:border-blue-600" data-category="all">Todos</button>
+                <button class="category-btn px-6 py-2 rounded-full border border-gray-600 hover:bg-blue-600 hover:border-blue-600" data-category="acao">Ação</button>
+                <button class="category-btn px-6 py-2 rounded-full border border-gray-600 hover:bg-blue-600 hover:border-blue-600" data-category="aventura">Aventura</button>
+                <button class="category-btn px-6 py-2 rounded-full border border-gray-600 hover:bg-blue-600 hover:border-blue-600" data-category="rpg">RPG</button>
+                <button class="category-btn px-6 py-2 rounded-full border border-gray-600 hover:bg-blue-600 hover:border-blue-600" data-category="estrategia">Estratégia</button>
+                <button class="category-btn px-6 py-2 rounded-full border border-gray-600 hover:bg-blue-600 hover:border-blue-600" data-category="esportes">Esportes</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section class="py-12 px-6 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Destaques</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Game Card 1 -->
+                <div class="game-card bg-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="acao">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/640f7534-0c09-4a41-8cbe-0b4577b7e7c5.png" alt="Cenário futurista de tiroteio em primeira pessoa com personagens em trajes de combate avançados" class="w-full h-56 object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">-20%</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">CyberStrike</h3>
+                        <p class="text-gray-300 text-sm mb-4">FPS futurista com gráficos impressionantes</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="line-through text-gray-400">R$ 199,90</span>
+                                <span class="text-yellow-400 font-bold text-lg ml-2">R$ 159,90</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="game-card bg-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="aventura">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/143547c7-686d-43cf-b3e9-782ff116ba10.png" alt="Cenário de floresta exuberante com explorador de chapéu enfrentando um templo antigo" class="w-full h-56 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Lost Temple</h3>
+                        <p class="text-gray-300 text-sm mb-4">Aventura épica em mundo aberto</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-400 font-bold text-lg">R$ 149,90</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 3 -->
+                <div class="game-card bg-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="rpg">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/76f1dafa-0d34-47e5-88af-6e1a82cc17f5.png" alt="Grupo de heróis fantásticos em campo de batalha medieval com magia e espadas" class="w-full h-56 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">LANÇAMENTO</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Dragon's Legacy</h3>
+                        <p class="text-gray-300 text-sm mb-4">RPG de mundo aberto com história profunda</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-400 font-bold text-lg">R$ 229,90</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 4 -->
+                <div class="game-card bg-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="estrategia">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b7daadb4-f7bd-497b-acc7-6f0cf8ce029b.png" alt="Visão aérea de cidade medieval com exércitos em formação e castelos" class="w-full h-56 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Empire Wars</h3>
+                        <p class="text-gray-300 text-sm mb-4">Construa seu império e domine o mundo</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-400 font-bold text-lg">R$ 119,90</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 5 -->
+                <div class="game-card bg-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="esportes">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3059e995-3ce2-4ff5-99a6-226f8fa31836.png" alt="Estádio de futebol lotado com jogadores em ação e bola no ar" class="w-full h-56 object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">-30%</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Pro Soccer 2023</h3>
+                        <p class="text-gray-300 text-sm mb-4">Simulador de futebol mais realista</p>
+                        <div class="flex justify-between items-center">
+                            <span class="line-through text-gray-400">R$ 179,90</span>
+                            <span class="text-yellow-400 font-bold text-lg ml-2">R$ 125,90</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 6 -->
+                <div class="game-card bg-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="acao">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c23ede3c-1cf9-455a-9d49-4d918b2e9988.png" alt="Carro esportivo em perseguição policial em cidade noturna com neon" class="w-full h-56 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Neon Chase</h3>
+                        <p class="text-gray-300 text-sm mb-4">Corridas emocionantes em mundo aberto</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-400 font-bold text-lg">R$ 139,90</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 px-6 bg-blue-900">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl font-bold mb-4">Receba nossas promoções</h2>
+            <p class="mb-6">Cadastre-se para receber as melhores ofertas diretamente no seu e-mail</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <input type="email" placeholder="Seu melhor e-mail" class="px-4 py-3 rounded flex-grow md:max-w-md text-black">
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-6 py-3 rounded">Assinar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-pixel">GameHub</h3>
+                    <p class="text-gray-400">A melhor loja de jogos para verdadeiros gamers.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Sobre nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Termos de serviço</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Política de privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Trabalhe conosco</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Atendimento</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Central de ajuda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Reembolsos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Status do pedido</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 text-xl">FB</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 text-xl">TW</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 text-xl">IG</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 text-xl">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>© 2023 GameHub. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter games by category
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'))
+                
+                // Add active class to clicked button
+                this.classList.add('active')
+                
+                const category = this.dataset.category
+                const games = document.querySelectorAll('.game-card')
+                
+                games.forEach(game => {
+                    if (category === 'all' || game.dataset.category === category) {
+                        game.style.display = 'block'
+                    } else {
+                        game.style.display = 'none'
+                    }
+                })
+            })
+        })
+        
+        // Smooth hover effect on game cards
+        const gameCards = document.querySelectorAll('.game-card')
+        gameCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease'
+            })
+        })
+    </script>
+</body>
+</html>
+
